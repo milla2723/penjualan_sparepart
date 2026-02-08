@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  background: #c0392b;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* --- SIDEBAR STYLING --- */
+.sidebar {
+  width: 260px;
+  background: #2d3436; /* Hitam Carbon */
+  height: 100vh;
+  padding: 30px 20px;
+  position: fixed;
+  border-right: 1px solid #ffffff1a;
+}
+
+.sidebar h2 {
+  font-family: "Orbitron", sans-serif;
+  color: #c0392b; /* Merah aksen */
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.sidebar p {
+  font-size: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ffffff1a;
+  padding-bottom: 10px;
+}
+
+.sidebar a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: #c0392b;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* --- CONTENT AREA --- */
+.content {
+  margin-left: 260px; /* Jarak agar tidak tertutup sidebar */
+  padding: 40px;
+  width: 100%;
+  background: linear-gradient(135deg, #c0392b 0%, #8e1e14 100%);
+}
+
+.content h1 {
+  font-family: "Orbitron", sans-serif;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* --- CARD SYSTEM --- */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff1a;
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #ffffff33;
+  box-shadow: 0 10px 20px #00000033;
+}
+
+.card span {
+  font-size: 14px;
+  color: #ffffffb3;
+  text-transform: uppercase;
+}
+
+.card b {
+  display: block;
+  font-size: 28px;
+  margin-top: 10px;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Animasi dasar: Biar pas dibuka, dashboardnya muncul pelan-pelan */
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-container {
+  display: flex;
+  gap: 15px;
+  padding-top: 20px;
+}
+
+.card {
+  background: #ffffff1a; /* Putih transparan tipis */
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #ffffff33;
+  flex: 1;
+  animation: muncul 0.8s ease; /* Panggil animasi di sini */
+  transition: 0.3s; /* Biar pas disentuh kursor, gerakannya halus */
+}
+
+/* Efek pas kursor di atas kotak (Hover) */
+.card:hover {
+  background: #ffffff26;
+  transform: translateY(-5px); /* Kotak naik dikit */
+  border-color: #ffffff;
+}
+
+.card span {
+  font-size: 13px;
+  color: #eeeeee;
+  display: block;
+}
+
+.card b {
+  font-family: "Orbitron", sans-serif;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+/* --- Inventory Table Styling --- */
+.glass-container {
+  background: #c0392b;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.table-header h1 {
+  font-family: "Orbitron", sans-serif;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.velo-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+}
+
+.velo-table th {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: left;
+  font-family: "Orbitron", sans-serif;
+  font-size: 13px;
+  border-bottom: 2px solid #c0392b;
+}
+
+.velo-table td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+
+.code-text {
+  font-weight: bold;
+  color: #f1c40f;
+}
+.name-text {
+  font-weight: 500;
+}
+
+/* Badge Satuan */
+.badge {
+  background: #c0392b;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Action Buttons */
+.btn-action {
+  display: inline-block;
+  background: #e74c3c;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 15px;
+  transition: 0.3s;
+  border: 1px solid #c0392b;
+}
+
+.btn-action:hover {
+  background: #c0392b;
+}
+
+.action-group {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.btn-small {
+  padding: 5px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-edit {
+  background: #2980b9;
+}
+.btn-delete {
+  background: #e74c3c;
+}
+
+.btn-small:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.velo-table td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  white-space: nowrap; /* Mencegah angka turun ke bawah (pindah baris) */
+}
+
+/* Mengatur agar kolom angka rata kanan (lebih profesional) */
+.velo-table td:nth-child(4),
+.velo-table td:nth-child(5) {
+  text-align: center;
+  font-family:
+    "Courier New", Courier, monospace; /* Font angka biasanya lebih rapi kalau monospace */
+  padding-right: 30px;
+}
+
+/* --- Styling Form Tambah Barang --- */
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  color: white;
+}
+
+.form-header {
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+}
+
+.form-header h2 {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.form-header p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.velo-form .input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.velo-form label {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.velo-form input,
+.velo-form select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: black;
+  outline: none;
+  transition: 0.3s;
+}
+
+.velo-form input:focus {
+  box-shadow: 0 0 8px rgba(192, 57, 43, 0.5);
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-save {
+  background: #2980b9;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+  transition: 0.3s;
+}
+
+.btn-save:hover {
+  background: #2071a7;
+  transform: translateY(-2px);
+}
+
+.btn-cancel {
+  background: #e74c3c;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+  transition: 0.3s;
+}
+
+.btn-cancel:hover {
+  background: #b3392e;
+  transform: translateY(-2px);
+}
+
+/* --- Tambahan agar teks Aksi ke tengah --- */
+.text-center {
+  text-align: center !important;
+}
+
+/* Memastikan container tombol aksi juga berada di tengah */
+.action-group {
+  display: flex;
+  gap: 8px;
+  justify-content: center; /* Ini yang bikin tombolnya ke tengah */
+  align-items: center;
+}

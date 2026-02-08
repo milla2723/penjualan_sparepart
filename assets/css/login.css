@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.login-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Menggunakan warna solid merah gelap yang kuat */
+  background: #c0392b;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Dekorasi elemen lingkaran di latar belakang */
+.login-body::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #e74c3c; /* Merah lebih terang untuk kontras */
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+  opacity: 0.3;
+}
+
+.login-box {
+  /* Menggunakan warna hex semi-transparan (format #rrggbbaa) */
+  background: #ffffff1a;
+  backdrop-filter: blur(15px);
+  padding: 50px 40px;
+  width: 420px;
+  border-radius: 20px;
+  border: 1px solid #ffffff33;
+  box-shadow: 0 25px 50px #00000080;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-5px);
+}
+
+.login-box h2 {
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px #0000004d;
+}
+
+.login-box input,
+.login-box select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ffffff1a;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  border-bottom: 2px solid #ffffff00;
+  transition: all 0.4s ease;
+}
+
+/* Mengatur warna teks di dalam dropdown agar terlihat */
+.login-box select option {
+  background: #2d3436;
+  color: #ffffff;
+}
+
+.login-box input:focus,
+.login-box select:focus {
+  background: #ffffff26;
+  border-bottom: 2px solid #ffffff; /* Fokus putih agar elegan di atas merah */
+  box-shadow: 0 5px 15px #00000033;
+}
+
+/* Warna placeholder */
+::placeholder {
+  color: #ffffffb3;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  /* Gradient hitam-abu untuk kesan 'Carbon Fiber' */
+  background: linear-gradient(90deg, #2d3436, #000000);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px #0000004d;
+  transition: all 0.3s ease;
+}
+
+.login-box button:hover {
+  background: linear-gradient(90deg, #000000, #2d3436);
+  box-shadow: 0 0 20px #00000066;
+  transform: scale(1.02);
+}
+
+.footer-text {
+  margin-top: 25px;
+  font-size: 11px;
+  color: #ffffff66;
+  letter-spacing: 1px;
+}
+
+/* Animasi Masuk */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-box {
+  animation: fadeIn 0.8s ease-out;
+}

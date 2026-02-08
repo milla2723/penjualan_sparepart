@@ -1,0 +1,49 @@
+body {
+  background: #c0392b !important;
+  margin: 0;
+  display: flex; /* Mengaktifkan mode flex */
+  justify-content: center; /* Menengah kan secara Horizontal (Kiri-Kanan) */
+  align-items: center; /* Menengah kan secara Vertikal (Atas-Bawah) */
+  flex-direction: column; /* Menyusun konten ke bawah */
+  height: 100vh; /* Penting: Mengambil tinggi penuh layar browser */
+  overflow: hidden; /* Menghilangkan scroll jika tidak perlu */
+}
+.loading-content {
+  text-align: center;
+  color: white;
+}
+.spinner-box {
+  margin-bottom: 20px;
+}
+/* Animasi Spinner Modern */
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #e74c3c;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.welcome-msg {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  font-weight: 500;
+}
+.role-badge {
+  display: inline-block;
+  padding: 5px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
