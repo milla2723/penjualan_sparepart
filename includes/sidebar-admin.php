@@ -9,7 +9,7 @@
         <a href="/penjualan_sparepart/admin/laporan/data-penjualan.php">Laporan Penjualan</a>
     <?php endif; ?>
 
-
+    <a href="../admin/users/table-users.php"> Kelola User</a>
     <a href="/penjualan_sparepart/auth/logout.php" style="margin-top: 50px; color:#ff7675;">
         Logout
     </a>
