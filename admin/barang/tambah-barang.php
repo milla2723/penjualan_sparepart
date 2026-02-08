@@ -63,7 +63,7 @@ if (isset($_POST['simpan'])) {
             </div>
 
             <div class="form-actions">
-                <button type="submit" name="simpan" class="btn-save">Simpan Barang</button>
+                <a href="../barang/table-barang.php" type="submit" class="btn-save" style="text-decoration: none; border: none; cursor: pointer; text-align:center " >Simpan Barang</a>
                 <a href="../barang/table-barang.php" class="btn-cancel">Batal</a>
             </div>
         </form>

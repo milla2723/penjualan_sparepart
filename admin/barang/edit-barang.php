@@ -72,8 +72,8 @@ if (isset($_POST['update'])) {
             </div>
 
             <div class="form-actions">
-                <button type="submit" name="update" class="btn-save" style="background: #2980b9 hover-background: #2071a7;">Simpan Perubahan</button>
-                <a href="barang.php" class="btn-cancel">Batal</a>
+                <a href="../barang/table-barang.php" type="submit" class="btn-save" style="text-decoration: none; border: none; cursor: pointer; text-align:center " >Simpan Barang</a>
+                <a href="../barang/table-barang.php" class="btn-cancel">Batal</a>
             </div>
         </form>
     </div>

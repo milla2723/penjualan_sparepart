@@ -11,7 +11,9 @@ $query = mysqli_query($koneksi, "SELECT * FROM penjualan ORDER BY id DESC");
 <div class="content">
     <div class="table-header">
         <h1>Laporan Penjualan</h1>
-        <a href="../laporan/cetak-struk.php" class="btn-action" style="background: #27ae60;">Export Excel</a>
+        <a href="../laporan/export-excel.php" class="btn-action" style="background: #27ae60; text-decoration: none; color: white; padding: 5px 10px; border-radius: 3px;">
+   <i class="fa fa-file-excel"></i> Export Excel
+</a>
     </div>
 
     <div class="glass-container">
